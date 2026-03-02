@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="color-scheme" content="light">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 30th, Mica 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF5EC;
+    --warm-white: #FDF9F3;
+    --amber: #C8843A;
+    --amber-light: #E8A95A;
+    --terracotta: #B5593A;
+    --brown-dark: #3C2415;
+    --brown-mid: #6B3F22;
+    --gold: #D4A843;
+    --sage: #7A8C6E;
+    --blush: #E8C4A8;
+    color-scheme: light only;
+  }
+
+  html {
+    background-color: #FAF5EC !important;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #FAF5EC !important;
+    color: #3C2415 !important;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(ellipse at 60% 40%, #E8C9A010 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, #C8843A12 0%, transparent 50%),
+                var(--cream);
+    padding: 80px 24px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-ornament {
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.2s forwards;
+  }
+
+  .hero-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(120px, 22vw, 240px);
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--amber-light);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.4s forwards;
+    position: relative;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 8vw, 96px);
+    font-weight: 700;
+    color: var(--brown-dark);
+    line-height: 1;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.6s forwards;
+    margin-top: -16px;
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: var(--brown-mid);
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.8s forwards;
+    max-width: 560px;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px auto;
+    opacity: 0;
+    animation: fadeUp 1s ease 1s forwards;
+  }
+
+  .hero-divider span {
+    height: 1px;
+    width: 80px;
+    background: var(--amber);
+    display: block;
+  }
+
+  .hero-divider em {
+    color: var(--amber);
+    font-size: 20px;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    opacity: 0;
+    animation: fadeUp 1s ease 1.4s forwards, pulse 2s ease 2s infinite;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 100px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #FAF5EC;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-weight: 400;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 600;
+    color: var(--brown-dark);
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  /* ── TRIBUTE ── */
+  .tribute {
+    background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-mid) 100%);
+    max-width: 100%;
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tribute::before {
+    content: '❝';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 280px;
+    color: var(--amber);
+    opacity: 0.08;
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .tribute-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tribute .section-label { color: var(--amber-light); }
+
+  .tribute-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3.5vw, 34px);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--blush);
+    line-height: 1.65;
+    margin-bottom: 40px;
+  }
+
+  .tribute-text strong {
+    color: var(--amber-light);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .tribute-sig {
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  /* ── TRAITS ── */
+  .traits-list {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .trait-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 0 48px;
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(60,36,21,0.15);
+    align-items: center;
+    transition: background 0.3s ease;
+    position: relative;
+  }
+
+  .trait-row:first-child { border-top: 1px solid rgba(60,36,21,0.1); }
+
+  .trait-row:hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(200,132,58,0.04), transparent);
+    pointer-events: none;
+  }
+
+  .trait-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: var(--amber);
+    opacity: 0.25;
+    line-height: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .trait-row:hover .trait-num { opacity: 0.6; }
+
+  .trait-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 600;
+    color: var(--brown-dark);
+    line-height: 1.1;
+    padding-right: 24px;
+    border-right: 1px solid rgba(60,36,21,0.1);
+  }
+
+  .trait-desc {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--brown-dark);
+    font-weight: 400;
+    padding-left: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .trait-row { grid-template-columns: 40px 1fr; grid-template-rows: auto auto; gap: 0 16px; }
+    .trait-num { font-size: 40px; grid-row: 1; }
+    .trait-title { grid-column: 2; grid-row: 1; border-right: none; padding-right: 0; font-size: 24px; }
+    .trait-desc { grid-column: 1 / -1; padding-left: 56px; margin-top: 10px; font-size: 14px; color: var(--brown-dark); font-weight: 400; }
+  }
+
+  .career-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--brown-mid);
+    margin-top: -28px;
+    margin-bottom: 48px;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  /* ── CAREER TIMELINE ── */
+  .career-section {
+    background: var(--warm-white);
+    max-width: 100%;
+    padding: 100px 24px;
+  }
+
+  .career-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 48px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--amber), transparent);
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0;
+    margin-bottom: 60px;
+    align-items: start;
+  }
+
+  .timeline-item:nth-child(odd) .tl-content {
+    grid-column: 1;
+    text-align: right;
+    padding-right: 40px;
+  }
+
+  .timeline-item:nth-child(odd) .tl-empty {
+    grid-column: 3;
+  }
+
+  .timeline-item:nth-child(even) .tl-content {
+    grid-column: 3;
+    text-align: left;
+    padding-left: 40px;
+    grid-row: 1;
+  }
+
+  .timeline-item:nth-child(even) .tl-empty {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .tl-dot {
+    grid-column: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 4px;
+  }
+
+  .tl-dot-inner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 3px solid var(--cream);
+    box-shadow: 0 0 0 1px var(--amber);
+    flex-shrink: 0;
+  }
+
+  .tl-year {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .tl-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--brown-dark);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .tl-company {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .tl-desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--brown-mid);
+    font-weight: 300;
+  }
+
+  .tl-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    border: 1px solid var(--amber-light);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+
+  /* ── GALLERY ── */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 48px;
+  }
+
+  .photo-slot {
+    background: var(--blush);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .photo-slot:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(60,36,21,0.18);
+    z-index: 2;
+  }
+
+  .photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-slot .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--blush), #d4b09a);
+  }
+
+  .photo-slot .placeholder span {
+    font-size: 28px;
+    opacity: 0.5;
+  }
+
+  .photo-slot .placeholder p {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brown-mid);
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+
+
+  .gallery-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--brown-mid);
+    font-style: italic;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--brown-dark);
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .footer-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 15vw, 160px);
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(200,132,58,0.3);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+
+  .footer-msg {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: var(--blush);
+    margin: 24px auto;
+    max-width: 500px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  .footer-from {
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--amber);
+    opacity: 0.7;
+  }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: linear-gradient(160deg, var(--brown-dark) 0%, #2a1a0e 100%);
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quiz-section::after {
+    content: '✦';
+    font-size: 400px;
+    color: var(--amber);
+    opacity: 0.03;
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .quiz-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quiz-section .section-label { color: var(--amber-light); }
+  .quiz-section .section-title { color: var(--warm-white); }
+  .quiz-section .section-title em { color: var(--amber-light); }
+
+  .quiz-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--blush);
+    opacity: 0.75;
+    margin-top: -24px;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+
+  .quiz-container {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,132,58,0.2);
+    border-radius: 4px;
+    padding: 48px;
+    backdrop-filter: blur(10px);
+  }
+
+  .quiz-progress {
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .quiz-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--amber), var(--amber-light));
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+
+  .quiz-progress-text {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    opacity: 0.7;
+    margin-bottom: 36px;
+  }
+
+  .quiz-question { display: none; }
+  .quiz-question.active { display: block; animation: fadeUp 0.4s ease forwards; }
+
+  .q-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 600;
+    color: var(--warm-white);
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+
+  .q-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .q-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(200,132,58,0.2);
+    color: var(--blush);
+    padding: 14px 20px;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+  }
+
+  .q-btn:hover {
+    background: rgba(200,132,58,0.15);
+    border-color: var(--amber);
+    color: var(--warm-white);
+    transform: translateX(4px);
+  }
+
+  .q-btn.selected {
+    background: rgba(200,132,58,0.2);
+    border-color: var(--amber);
+    color: var(--amber-light);
+  }
+
+  .quiz-result { text-align: center; animation: fadeUp 0.6s ease forwards; }
+
+  .result-badge {
+    font-size: 64px;
+    margin-bottom: 16px;
+    display: block;
+    animation: fadeUp 0.4s ease 0.1s both;
+  }
+
+  .result-era {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--warm-white);
+    margin-bottom: 6px;
+    animation: fadeUp 0.4s ease 0.2s both;
+  }
+
+  .result-years {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 24px;
+    animation: fadeUp 0.4s ease 0.3s both;
+  }
+
+  .result-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--blush);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    animation: fadeUp 0.4s ease 0.4s both;
+  }
+
+  .result-mica {
+    font-size: 13px;
+    color: var(--amber-light);
+    opacity: 0.8;
+    line-height: 1.6;
+    font-style: italic;
+    padding: 16px;
+    border-top: 1px solid rgba(200,132,58,0.2);
+    border-bottom: 1px solid rgba(200,132,58,0.2);
+    margin-bottom: 32px;
+    animation: fadeUp 0.4s ease 0.5s both;
+  }
+
+  .retake-btn {
+    background: transparent;
+    border: 1px solid var(--amber);
+    color: var(--amber);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    animation: fadeUp 0.4s ease 0.6s both;
+  }
+
+  .retake-btn:hover { background: var(--amber); color: var(--brown-dark); }
+
+  @media (max-width: 600px) { .quiz-container { padding: 28px 20px; } }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .timeline::before { left: 24px; }
+    .timeline-item { grid-template-columns: 48px 1fr; }
+    .timeline-item:nth-child(odd) .tl-content,
+    .timeline-item:nth-child(even) .tl-content {
+      grid-column: 2; text-align: left; padding: 0 0 0 16px;
+    }
+    .timeline-item:nth-child(odd) .tl-empty,
+    .timeline-item:nth-child(even) .tl-empty { display: none; }
+    .tl-dot { grid-column: 1; }
+
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .photo-slot:nth-child(n) { grid-column: auto; grid-row: auto; }
+    .photo-slot .placeholder { min-height: 150px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <p class="hero-ornament">Celebrating ✦ Mica Woode</p>
+  <div class="hero-number">30</div>
+  <h1 class="hero-name">Happy Birthday</h1>
+  <p class="hero-tagline">For the woman who gives everything to everyone  today, the world celebrates you.</p>
+  <div class="hero-divider">
+    <span></span>
+    <em>✦</em>
+    <span></span>
+  </div>
+  <p class="scroll-hint">Scroll to celebrate ↓</p>
+</div>
+
+<!-- ── TRIBUTE ── -->
+<div class="tribute">
+  <div class="tribute-inner">
+    <span class="section-label">Words from the heart</span>
+    <p class="tribute-text">
+      There is a particular kind of person you meet once in a lifetime, if you are lucky. 
+      The kind whose presence you feel before they even walk into the room. The kind whose 
+      laugh you would recognise anywhere. The kind who, without really trying, 
+      <strong>makes everything feel a little more alive.</strong>
+      <br><br>
+      Mica, I have known you since we were teenagers at GIS, and I want you to know 
+      something: watching you become who you are has been one of the great privileges of my life. 
+      Not just the degrees, not just the career, not just the incredible woman the world sees. 
+      But <strong>you.</strong> The real you. The one who shows up. The one who loves deeply 
+      and gives freely and never, ever keeps score.
+      <br><br>
+      You deserve every beautiful thing that is coming to you. 
+      <strong>Happy 30th birthday, Mica. This one is for you.</strong>
+    </p>
+    <p class="tribute-sig"> With so much love, always ✦</p>
+  </div>
+</div>
+
+<!-- ── WHO SHE IS ── -->
+<section>
+  <span class="section-label reveal">The real one</span>
+  <h2 class="section-title reveal">The Mica that<br><em>we all know</em></h2>
+  <div class="traits-list">
+    <div class="trait-row reveal">
+      <div class="trait-num">01</div>
+      <h3 class="trait-title">Pure Energy</h3>
+      <p class="trait-desc">You know those people whose energy wraps around you the moment they arrive? That is her. She walks in and something in the room shifts. Warmer. Louder. More alive. That has always been Mica.</p>
+    </div>
+    <div class="trait-row reveal">
+      <div class="trait-num">02</div>
+      <h3 class="trait-title">Deeply Caring</h3>
+      <p class="trait-desc">She notices things. Quietly, without announcement, she sees when you are not okay. And then she does something about it. Not because she has to. Because that is simply who she is, down to her bones.</p>
+    </div>
+    <div class="trait-row reveal">
+      <div class="trait-num">03</div>
+      <h3 class="trait-title">Built for Impact</h3>
+      <p class="trait-desc">Every choice she has made  every job, every study, every late night  has been in service of something bigger than herself. She wants the world to be better. And quietly, steadily, she is making it so.</p>
+    </div>
+    <div class="trait-row reveal">
+      <div class="trait-num">04</div>
+      <h3 class="trait-title">The Best of Us</h3>
+      <p class="trait-desc">She does not try to be the best. She just is. And somehow, being around her makes you want to be better too. Not out of competition. Out of pure, quiet inspiration. That is a gift very few people have.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAREER ── -->
+<div class="career-section">
+  <div class="career-inner">
+    <span class="section-label reveal">Her story</span>
+    <h2 class="section-title reveal">Look how far<br><em>she has come</em></h2>
+    <p class="career-intro reveal">From GIS to the world. I watched every single one of these chapters happen in real time, and I am still in awe.</p>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="tl-content">
+          <p class="tl-year">2015</p>
+          <h3 class="tl-role">She packed her bags and left for the UK</h3>
+          <p class="tl-desc">She left home. Ghana to England, just like that. I remember the feeling of watching her go and knowing, with complete certainty, that she was going to be okay. More than okay. Four years later she graduated, and I was not even a little bit surprised.</p>
+        </div>
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <p class="tl-year">2017</p>
+          <h3 class="tl-role">She landed IBM while still a student</h3>
+          <p class="tl-desc">IBM called and she answered. As a student. Managing services across 200 NHS trusts before she had even finished her degree. I have always known she was built differently. This was just the first time the world got to see it too.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-content">
+          <p class="tl-year">2020</p>
+          <h3 class="tl-role">She got her Masters. With Distinction.</h3>
+          <p class="tl-desc">She went back to study. A whole Masters. And she came out the other side with a Distinction. I smiled so hard when I found out. I cannot explain it. It is just the most Mica outcome possible. Of course it was a Distinction.</p>
+          <span class="tl-badge">✦ Distinction</span>
+        </div>
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <p class="tl-year">2021</p>
+          <h3 class="tl-role">She came home and got straight to work</h3>
+          <p class="tl-desc">She came home. Back to Accra, back to us. And she hit the ground running. No pause, no in-between. She had always known what she wanted to do with her life, and she was not about to slow down now.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-content">
+          <p class="tl-year">2022</p>
+          <h3 class="tl-role">MEST Africa called. She answered.</h3>
+          <p class="tl-desc">MEST Africa. Nearly three years. She started as an Associate and left as Lead. But here is what the title does not tell you: the care she put into every single piece of work she did there. She does not just do jobs. She builds things that last.</p>
+          <span class="tl-badge">↑ Got that promotion</span>
+        </div>
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-content">
+          <p class="tl-year">2025</p>
+          <h3 class="tl-role">Now she is doing it on a global stage</h3>
+          <p class="tl-desc">And now this. Global. Meaningful. Exactly where she was always heading. I have had the honour of watching every chapter of this story unfold. And I want her to know: I see her. I always have. And I am so deeply, quietly proud.</p>
+          <span class="tl-badge">✦ Right now</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── GALLERY ── -->
+<section>
+  <span class="section-label reveal">Memories</span>
+  <h2 class="section-title reveal">A life lived in <em>full colour</em></h2>
+  <div class="gallery-grid reveal">
+    <div class="photo-slot"><img src="photo-01.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-02.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-03.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-04.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-05.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-06.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-07.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-08.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-09.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-10.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-11.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-12.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-13.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-14.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-15.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-16.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-17.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-18.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-19.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-20.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-21.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-22.jpg" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-23.png" alt="Mica"></div>
+    <div class="photo-slot"><img src="photo-24.png" alt="Mica"></div>
+  </div>
+
+</section>
+
+<!-- ── QUIZ ── -->
+<div class="quiz-section">
+  <div class="quiz-inner">
+    <span class="section-label reveal">For her people</span>
+    <h2 class="section-title reveal">Which Mica era<br><em>are you?</em></h2>
+    <p class="quiz-subtitle reveal">She has lived many lives  all of them brilliant. Answer 5 questions to find out which chapter of Mica's story you'd belong to.</p>
+
+    <div class="quiz-container reveal" id="quiz">
+
+      <!-- Progress bar -->
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar"></div>
+      </div>
+      <p class="quiz-progress-text" id="progressText">Question 1 of 5</p>
+
+      <!-- Questions -->
+      <div class="quiz-questions" id="quizQuestions">
+
+        <div class="quiz-question active" data-q="0">
+          <h3 class="q-text">You've just arrived somewhere completely new. What's your first move?</h3>
+          <div class="q-options">
+            <button class="q-btn" data-q="0" data-a="0">Explore everything immediately  map? What map?</button>
+            <button class="q-btn" data-q="0" data-a="1">Find the most important person in the room and introduce yourself</button>
+            <button class="q-btn" data-q="0" data-a="2">Open your notebook and start taking notes on everything</button>
+            <button class="q-btn" data-q="0" data-a="3">Ask how you can help  someone always needs something</button>
+            <button class="q-btn" data-q="0" data-a="4">Pull up the data on this place first. Preparation is everything.</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-q="1">
+          <h3 class="q-text">Your friends describe you as…</h3>
+          <div class="q-options">
+            <button class="q-btn" data-q="1" data-a="0">The adventurous one who dragged us somewhere amazing</button>
+            <button class="q-btn" data-q="1" data-a="1">The ambitious one who always has a plan B (and C)</button>
+            <button class="q-btn" data-q="1" data-a="2">The focused one who quietly outperforms everyone</button>
+            <button class="q-btn" data-q="1" data-a="3">The heart of the group  always giving, never asking</button>
+            <button class="q-btn" data-q="1" data-a="4">The visionary  always talking about the bigger picture</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-q="2">
+          <h3 class="q-text">Pick your ideal Saturday:</h3>
+          <div class="q-options">
+            <button class="q-btn" data-q="2" data-a="0">Road trip to somewhere I've never been</button>
+            <button class="q-btn" data-q="2" data-a="1">Networking brunch followed by a long walk where I plan my next move</button>
+            <button class="q-btn" data-q="2" data-a="2">A long, uninterrupted stretch of deep work  in total silence</button>
+            <button class="q-btn" data-q="2" data-a="3">Cooking for everyone and being surrounded by the people I love</button>
+            <button class="q-btn" data-q="2" data-a="4">Reading research, thinking about impact, planning something meaningful</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-q="3">
+          <h3 class="q-text">When faced with a challenge, you:</h3>
+          <div class="q-options">
+            <button class="q-btn" data-q="3" data-a="0">Jump in headfirst  figure it out as you go</button>
+            <button class="q-btn" data-q="3" data-a="1">Treat it like a project  process, stakeholders, deliverables</button>
+            <button class="q-btn" data-q="3" data-a="2">Research it so thoroughly that solving it almost feels anticlimactic</button>
+            <button class="q-btn" data-q="3" data-a="3">Rally everyone around you  problems are easier together</button>
+            <button class="q-btn" data-q="3" data-a="4">Ask: who does this affect, and how do I measure success?</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-q="4">
+          <h3 class="q-text">What's your personal motto?</h3>
+          <div class="q-options">
+            <button class="q-btn" data-q="4" data-a="0">"New city, new me  let's go."</button>
+            <button class="q-btn" data-q="4" data-a="1">"Opportunity doesn't knock, it emails. Reply fast."</button>
+            <button class="q-btn" data-q="4" data-a="2">"Excellence isn't a goal, it's a standard."</button>
+            <button class="q-btn" data-q="4" data-a="3">"If I can help, I will. Simple."</button>
+            <button class="q-btn" data-q="4" data-a="4">"Does the data back this up? Good. Now let's change something."</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Result -->
+      <div class="quiz-result" id="quizResult" style="display:none;">
+        <div class="result-badge" id="resultBadge"></div>
+        <h3 class="result-era" id="resultEra"></h3>
+        <p class="result-years" id="resultYears"></p>
+        <p class="result-desc" id="resultDesc"></p>
+        <p class="result-mica" id="resultMica"></p>
+        <button class="retake-btn" id="retakeBtn">↺ Try again</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-number">30</div>
+  <p class="footer-msg">"Some people leave you exactly as they found you. And then there is Mica  who leaves you better, warmer, and more sure of yourself than you were before."</p>
+  <p class="footer-from">Happy 30th Birthday, Mica ✦ You are so deeply loved.</p>
+</footer>
+
+<script>
+  // ── QUIZ LOGIC ──
+  const eras = [
+    {
+      badge: '✈️',
+      era: 'The Loughborough Era',
+      years: '2015 – 2019',
+      desc: 'Bold, curious, and completely unafraid of the unknown. You pack your bags and go  trusting that the adventure will figure itself out. You were built for new chapters.',
+      mica: 'Mica left Ghana at 18 and built a life in the UK entirely on her own terms. That took a particular kind of courage that not everyone has.'
+    },
+    {
+      badge: '💼',
+      era: 'The IBM Era',
+      years: '2017 – 2018',
+      desc: 'You are strategic, polished, and quietly formidable. You walk into rooms and know exactly what you are doing there. People underestimate you once  never twice.',
+      mica: 'At IBM, Mica managed operations across 200 NHS trusts as a student intern. She was never just passing through  she was always making her mark.'
+    },
+    {
+      badge: '🏆',
+      era: 'The MSc Distinction Era',
+      years: '2019 – 2020',
+      desc: 'You do not do things halfway. Where others aim to pass, you aim to excel  and then exceed that. Your standards for yourself are almost unreasonably high. And you meet them.',
+      mica: 'Mica graduated with a Distinction in Management & Business Analytics. Because when has she ever done anything halfway?'
+    },
+    {
+      badge: '🌍',
+      era: 'The MEST Africa Era',
+      years: '2022 – 2025',
+      desc: 'You are deeply community-minded. You give generously, show up consistently, and measure your success by the impact you have on the people around you. You are the glue.',
+      mica: 'At MEST Africa, Mica spent nearly three years building research systems for Ghana\'s tech ecosystem  and left as Research & Impact Lead. She built something that lasted.'
+    },
+    {
+      badge: '🌐',
+      era: 'The Caribou Era',
+      years: '2025 – Present',
+      desc: 'You think in systems. You zoom out. You ask the big questions  and then you find a way to measure the answers. You are purpose-driven at a global scale.',
+      mica: 'Mica is now a Measurement & Impact Analyst at Caribou  working globally to ensure that the work that matters most is properly understood and valued.'
+    }
+  ];
+
+  const scores = [0, 0, 0, 0, 0];
+  let currentQ = 0;
+  const totalQ = 5;
+
+  document.querySelectorAll('.q-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const q = parseInt(this.dataset.q);
+      const a = parseInt(this.dataset.a);
+
+      // Highlight selected
+      document.querySelectorAll(`.q-btn[data-q="${q}"]`).forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+
+      scores[a]++;
+
+      setTimeout(() => {
+        currentQ++;
+        if (currentQ < totalQ) {
+          document.querySelector(`.quiz-question[data-q="${q}"]`).classList.remove('active');
+          document.querySelector(`.quiz-question[data-q="${currentQ}"]`).classList.add('active');
+          document.getElementById('progressBar').style.width = `${(currentQ / totalQ) * 100}%`;
+          document.getElementById('progressText').textContent = `Question ${currentQ + 1} of ${totalQ}`;
+        } else {
+          showResult();
+        }
+      }, 320);
+    });
+  });
+
+  function showResult() {
+    const maxScore = Math.max(...scores);
+    const eraIndex = scores.indexOf(maxScore);
+    const era = eras[eraIndex];
+
+    document.getElementById('progressBar').style.width = '100%';
+    document.getElementById('progressText').textContent = 'Complete ✦';
+
+    document.getElementById('resultBadge').textContent = era.badge;
+    document.getElementById('resultEra').textContent = era.era;
+    document.getElementById('resultYears').textContent = era.years;
+    document.getElementById('resultDesc').textContent = era.desc;
+    document.getElementById('resultMica').textContent = '✦ Mica in this era: ' + era.mica;
+
+    document.getElementById('quizQuestions').style.display = 'none';
+    document.getElementById('quizResult').style.display = 'block';
+  }
+
+  document.getElementById('retakeBtn').addEventListener('click', () => {
+    scores.fill(0);
+    currentQ = 0;
+    document.querySelectorAll('.q-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('quizResult').style.display = 'none';
+    document.getElementById('quizQuestions').style.display = 'block';
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.querySelector('.quiz-question[data-q="0"]').classList.add('active');
+    document.getElementById('progressBar').style.width = '0%';
+    document.getElementById('progressText').textContent = 'Question 1 of 5';
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
